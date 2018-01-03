@@ -62,7 +62,11 @@ encoder = LabelEncoder()
 y_train = encoder.fit_transform(y_train)
 
 # Create classifier
-clf = svm.SVC(kernel='linear')
+# TODO: Parameters to tweak
+param_C = 500.0
+param_kernel_type = 'rbf'
+param_class_weight = 'balanced'
+clf = svm.SVC(C=param_C, kernel=param_kernel_type, class_weight=param_class_weight)
 
 # Set up 5-fold cross-validation
 kf = cross_validation.KFold(len(X_train),
