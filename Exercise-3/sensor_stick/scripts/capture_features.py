@@ -41,7 +41,7 @@ if __name__ == '__main__':
 
         num_attempts = 20 # orig 5
         for i in range(num_attempts):
-            # make five attempts to get a valid a point cloud then give up
+            # make five attempts to get a valid point cloud then give up
             sample_was_good = False
             try_count = 0
             while not sample_was_good and try_count < 5:
